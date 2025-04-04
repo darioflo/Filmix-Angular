@@ -1,0 +1,77 @@
+.nav {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  color: rgb(211, 214, 219);
+  background: linear-gradient(
+    to top,
+    rgba(29, 22, 22, 0.8),
+    /* Color negro con opacidad */ rgba(58, 71, 80, 0.8)
+      /* Color gris con opacidad */
+  );
+}
+
+.logo {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  transition: all 0.3s ease-in;
+  position: relative;
+}
+
+a:hover {
+  color: rgb(190, 49, 68);
+}
+
+a::before {
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: rgb(190, 49, 68);
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover::before {
+  width: 100%;
+  transform: translateX(-50%);
+}
+
+input {
+  width: 80%;
+  height: 3rem;
+  border-bottom: 2px solid rgb(211, 214, 219);
+  padding: 0.5rem;
+  outline: none;
+  transition: all 0.3s ease-in;
+  color: rgb(190, 49, 68);
+}
+
+input:hover {
+  border-bottom: 2px solid rgb(190, 49, 68);
+}
+
+input::placeholder {
+  color: rgb(211, 214, 219); /* Color inicial del placeholder */
+  transition: color 0.3s ease-in;
+}
+
+input:hover::placeholder {
+  color: rgb(190, 49, 68); /* Color rojo del placeholder al hacer hover */
+}
+.search-btn i {
+  color: rgb(211, 214, 219); /* Color inicial */
+  transition: color 0.3s ease-in-out;
+}
+
+.search-btn:hover i {
+  color: rgb(190, 49, 68); /* Color al hacer hover */
+}

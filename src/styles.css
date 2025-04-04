@@ -1,0 +1,22 @@
+@import "tailwindcss";
+:root {
+  --first-color: rgb(29, 22, 22);
+  --second-color: rgb(58, 71, 80);
+  --third-color: rgb(190, 49, 68);
+  --fourth-color: rgb(238, 238, 238);
+  --fifth-color: rgb(142, 22, 22);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--first-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
