@@ -1,0 +1,23 @@
+<section class="section-image w-screen h-auto flex justify-center items-center">
+  <div class="hero-image w-screen h-screen relative">
+    <video
+      [src]="movie.thumb"
+      autoplay
+      loop
+      muted
+      class="w-full h-full object-cover"
+    ></video>
+    >
+  </div>
+  <div class="hero-absolute absolute flex justify-start items-center">
+    <div class="info w-[50%] h-[auto]">
+      <h1 class="text-9xl">{{ movie.name }}</h1>
+      <p class="text-2xl">{{ movie.description }}</p>
+      <p class="text-2xl">{{ movie.genre }}</p>
+      <p class="text-2xl">{{ movie.languague }}</p>
+      <p class="text-2xl">
+        {{`${movie.actors[0]}, ${movie.actors[1]}, ${movie.actors[2]}`}}
+      </p>
+    </div>
+  </div>
+</section>
