@@ -11,7 +11,10 @@ export class FilmServicesService {
 
   private http = inject(HttpClient);
 
-  getMovie() {
-    return this.http.get<any>(this.url, options);
+  getMovie(page: number) {
+    return this.http.get<any>(
+      `https://api.themoviedb.org/3/movie/popular?language=en-US&page=${page}`,
+      options
+    );
   }
 }

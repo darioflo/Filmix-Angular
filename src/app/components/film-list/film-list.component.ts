@@ -15,14 +15,18 @@ import FilmPopular from '../../models/FilmPopular';
 export class FilmListComponent implements OnInit {
   movie: FilmHome[];
   films: FilmPopular[];
+  page: number;
 
   constructor(private filmServices: FilmServicesService) {
     this.movie = [];
     this.films = [];
+    this.page = 1;
   }
 
   ngOnInit(): void {
-    this.filmServices.getMovie().subscribe({
+    this.selectPage();
+
+    this.filmServices.getMovie(this.page).subscribe({
       next: (data) => {
         this.films = data.results;
         console.log(this.films);
@@ -31,5 +35,9 @@ export class FilmListComponent implements OnInit {
         console.log(error);
       },
     });
+  }
+
+  selectPage() {
+    this.page = Math.floor(Math.random() * 20);
   }
 }

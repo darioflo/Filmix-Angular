@@ -1,13 +1,25 @@
 <div
-  class="card-film flex justify-center items-center flex-col border-4 border-b-emerald-700 w-[20rem] h-[30rem]"
+  class="card-film flex justify-center items-center flex-col border-4 border-b-emerald-700 w-[20rem] h-[25rem] cursor-pointer rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105"
 >
-  <img [src]="film()?.poster_path" alt="" class="w-[100%] h-[15rem]" />
+  <img
+    [src]="'https://image.tmdb.org/t/p/w500/' + film()?.poster_path"
+    [alt]="film()?.title"
+    class="w-[100%] h-[15rem] object-cover"
+  />
   <div
-    class="info-film flex justify-start items-start flex-col border border-b-slate-600 w-[100%] h-[15rem] gap-1"
+    class="info-film flex justify-start items-start flex-col bg-gray-800 text-white border-t border-slate-600 w-[100%] h-[15rem] gap-2 p-4"
   >
-    <h3>{{ film()?.original_title }}</h3>
-    <p>{{ film()?.title }}</p>
-    <p>{{ film()?.original_language }}</p>
-    <p>{{ film()?.popularity }}</p>
+    <h3 class="text-lg font-bold">
+      Movie: <b>{{ film()?.original_title }}</b>
+    </h3>
+    <p class="text-sm">
+      Language: <b>{{ film()?.original_language }}</b>
+    </p>
+    <p class="text-sm">
+      Popularity: <b>{{ film()?.popularity }}</b>
+    </p>
+    <p class="text-sm">
+      <b>{{ film()?.release_date }}</b>
+    </p>
   </div>
 </div>
