@@ -1,0 +1,13 @@
+<div
+  class="card-film flex justify-center items-center flex-col border-4 border-b-emerald-700 w-[20rem] h-[30rem]"
+>
+  <img [src]="film()?.poster_path" alt="" class="w-[100%] h-[15rem]" />
+  <div
+    class="info-film flex justify-start items-start flex-col border border-b-slate-600 w-[100%] h-[15rem] gap-1"
+  >
+    <h3>{{ film()?.original_title }}</h3>
+    <p>{{ film()?.title }}</p>
+    <p>{{ film()?.original_language }}</p>
+    <p>{{ film()?.popularity }}</p>
+  </div>
+</div>

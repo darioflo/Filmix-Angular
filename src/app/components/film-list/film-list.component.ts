@@ -1,33 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import FilmHome from '../../models/FilmHome';
-import { HttpClient } from '@angular/common/http';
-import options from '../../models/options';
+import { FilmServicesService } from '../../services/film-services.service';
+import Film from '../../models/Film';
+import { CardFilmComponent } from '../card-film/card-film.component';
+import { NgFor } from '@angular/common';
+import FilmPopular from '../../models/FilmPopular';
 
 @Component({
   selector: 'app-film-list',
-  imports: [],
+  imports: [CardFilmComponent, NgFor],
   templateUrl: './film-list.component.html',
   styleUrl: './film-list.component.css',
 })
 export class FilmListComponent implements OnInit {
   movie: FilmHome[];
+  films: FilmPopular[];
 
-  readonly url =
-    'https://api.themoviedb.org/3/person/popular?language=en-US&page=1';
-
-  constructor(private http: HttpClient) {
+  constructor(private filmServices: FilmServicesService) {
     this.movie = [];
+    this.films = [];
   }
 
   ngOnInit(): void {
-    this.getMovie();
-  }
-
-  getMovie() {
-    this.http.get<any>(this.url, options).subscribe({
+    this.filmServices.getMovie().subscribe({
       next: (data) => {
-        this.movie = data.results;
-        console.log(this.movie);
+        this.films = data.results;
+        console.log(this.films);
       },
       error: (error) => {
         console.log(error);
