@@ -1,0 +1,73 @@
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  background-color: var(--first-color); /* Negro */
+  color: var(--fourth-color); /* Blanco */
+}
+
+.film-detail {
+  display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.poster img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.film-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--third-color); /* Rojo */
+}
+
+.title span {
+  color: var(--fourth-color); /* Blanco */
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.genres,
+.production-companies,
+.production-countries {
+  margin-top: 1rem;
+}
+
+.genres h2,
+.production-companies h2,
+.production-countries h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--third-color); /* Rojo */
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tags span {
+  background-color: var(--second-color); /* Gris oscuro */
+  color: var(--fourth-color); /* Blanco */
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 0.875rem;
+}

@@ -1,0 +1,52 @@
+<app-navbar></app-navbar>
+<section class="section">
+  <div class="film-detail">
+    <!-- Imagen del póster -->
+    <div class="poster">
+      <img
+        [src]="'https://image.tmdb.org/t/p/w500/' + film.poster_path"
+        alt="Póster de {{ film.original_title }}"
+      />
+    </div>
+
+    <!-- Información de la película -->
+    <div class="film-info">
+      <h1 class="title">
+        Título: <span>{{ film.original_title }}</span>
+      </h1>
+      <p class="description"><b>Descripción:</b> {{ film.overview }}</p>
+      <p><b>País de origen:</b> {{ film.origin_country }}</p>
+      <p><b>Idioma original:</b> {{ film.original_language }}</p>
+      <p><b>Popularidad:</b> {{ film.popularity }}</p>
+      <p><b>Eslogan:</b> {{ film.tagline }}</p>
+
+      <!-- Géneros -->
+      <div class="genres">
+        <h2>Géneros:</h2>
+        <div class="tags">
+          <span *ngFor="let genre of film.genres">{{ genre.name }}</span>
+        </div>
+      </div>
+
+      <!-- Compañías de producción -->
+      <div class="production-companies">
+        <h2>Compañías de producción:</h2>
+        <div class="tags">
+          <span *ngFor="let company of film.production_companies">
+            {{ company.name }}
+          </span>
+        </div>
+      </div>
+
+      <!-- Países de producción -->
+      <div class="production-countries">
+        <h2>Países de producción:</h2>
+        <div class="tags">
+          <span *ngFor="let country of film.production_countries">
+            {{ country.name }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

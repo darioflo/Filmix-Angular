@@ -1,11 +1,19 @@
 <div
   class="card-film flex justify-center items-center flex-col border-4 border-b-emerald-700 w-[20rem] h-[25rem] cursor-pointer rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105"
+  (click)="goToDetails(film()?.id)"
 >
-  <img
-    [src]="'https://image.tmdb.org/t/p/w500/' + film()?.poster_path"
-    [alt]="film()?.title"
-    class="w-[100%] h-[15rem] object-cover"
-  />
+  <div
+    class="w-[100%] h-[15rem] bg-cover bg-center"
+    [ngStyle]="{
+      'background-image':
+        'url(https://image.tmdb.org/t/p/w500/' +
+        (film()?.backdrop_path || film()?.poster_path) +
+        ')',
+      'background-attachment': 'fixed',
+      'background-size': 'cover',
+      'background-position': 'center'
+    }"
+  ></div>
   <div
     class="info-film flex justify-start items-start flex-col bg-gray-800 text-white border-t border-slate-600 w-[100%] h-[15rem] gap-2 p-4"
   >

@@ -2,7 +2,7 @@
   padding: 0.5rem;
 }
 .card-film {
-  background-color: var(--second-color); /* Fondo gris oscuro */
+  background-color: var(--second-color);
   border: 2px solid var(--third-color); /* Borde rojo */
   border-radius: 12px; /* Bordes redondeados */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
