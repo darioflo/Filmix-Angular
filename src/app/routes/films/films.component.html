@@ -1,1 +1,6 @@
-<p>films works!</p>
+<app-navbar></app-navbar>
+<section
+  class="h-[auto] w-screen flex justify-around items-center gap-5 flex-row flex-wrap section"
+>
+  <app-card-film *ngFor="let film of films" [film]="film"></app-card-film>
+</section>

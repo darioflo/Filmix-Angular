@@ -11,10 +11,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
+  font-family: "Cutive", serif;
+  font-weight: 400;
   font-style: normal;
+
   color: rgb(211, 214, 219);
 }
 
@@ -25,9 +25,9 @@ body {
   align-items: center;
   flex-direction: column;
   overflow-x: hidden;
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
+  font-family: "Cutive", serif;
+  font-weight: 400;
   font-style: normal;
+
   color: rgb(211, 214, 219);
 }
