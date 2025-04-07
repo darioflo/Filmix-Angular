@@ -1,0 +1,6 @@
+<app-navbar> </app-navbar>
+<section
+  class="section-tv w-screen h-[auto] flex justify-around items-center gap-7 flex-row flex-wrap"
+>
+  <app-card-film *ngFor="let tv of tvShows" [tvShow]="tv"></app-card-film>
+</section>

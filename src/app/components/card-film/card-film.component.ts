@@ -3,6 +3,7 @@ import Film from '../../models/Film';
 import FilmPopular from '../../models/FilmPopular';
 import { NgStyle } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
+import { TvShow } from '../../models/TV-Show';
 
 @Component({
   selector: 'app-card-film',
@@ -12,6 +13,7 @@ import { Router, RouterLink } from '@angular/router';
 })
 export class CardFilmComponent {
   film = input<FilmPopular>();
+  tvShow = input<TvShow>();
 
   constructor(private router: Router) {}
 

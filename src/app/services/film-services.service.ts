@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import options from '../models/options';
 import { FilmDetail } from '../models/FilmDetail';
+import { TvShow } from '../models/TV-Show';
 
 @Injectable({
   providedIn: 'root',
@@ -11,6 +12,9 @@ export class FilmServicesService {
     'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1';
 
   readonly findById = 'https://api.themoviedb.org/3/movie/';
+
+  readonly urlTV =
+    'https://api.themoviedb.org/3/discover/tv?include_adult=true&include_null_first_air_dates=false&language=en-US&page=2&sort_by=popularity.desc';
 
   private http = inject(HttpClient);
 
@@ -26,6 +30,13 @@ export class FilmServicesService {
 
     return this.http.get<FilmDetail>(
       `https://api.themoviedb.org/3/movie/${id}`,
+      options
+    );
+  }
+
+  getTVShows(page: number) {
+    return this.http.get<any>(
+      `https://api.themoviedb.org/3/discover/tv?include_adult=true&include_null_first_air_dates=false&language=en-US&page=${page}&sort_by=popularity.desc`,
       options
     );
   }
