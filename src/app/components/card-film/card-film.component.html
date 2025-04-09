@@ -33,8 +33,9 @@
     </p>
     <button
       class="rounded-[50%] w-[3rem] h-[3rem] bg-red-700 text-amber-50 cursor-pointer text-2xl"
+      (click)="addToFav($event)"
     >
-      +
+      {{ added ? "✔" : "+" }}
     </button>
   </div>
 </div>

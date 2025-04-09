@@ -1,1 +1,6 @@
-<p>my-list works!</p>
+<app-navbar></app-navbar>
+<section
+  class="section-my-list w-screen h-[auto] flex justify-start items-start flex-row flex-wrap"
+>
+  <app-card-film *ngFor="let film of listFilms" [film]="film"></app-card-film>
+</section>
