@@ -15,6 +15,7 @@ export class TvShowsComponent implements OnInit {
   tvShows: TvShow[] = [];
   public filmServices = inject(FilmServicesService);
   page: number = 1;
+  id: number = 1;
 
   ngOnInit(): void {
     this.getShows();
