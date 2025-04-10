@@ -1,0 +1,50 @@
+/* Contenedor del menú desplegable */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Botón del menú */
+.dropdown-button {
+  background-color: var(--third-color); /* Rojo */
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-button:hover {
+  background-color: var(--second-color); /* Gris oscuro */
+}
+
+/* Contenido del menú desplegable */
+.dropdown-content {
+  display: none; /* Oculto por defecto */
+  position: absolute;
+  background-color: var(--first-color); /* Negro */
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 1;
+}
+
+/* Estilo de los enlaces dentro del menú */
+.dropdown-content a {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--third-color); /* Rojo */
+}
+
+/* Mostrar el menú al pasar el cursor */
+.dropdown:hover .dropdown-content {
+  display: block;
+}

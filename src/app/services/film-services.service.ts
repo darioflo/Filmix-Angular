@@ -42,4 +42,11 @@ export class FilmServicesService {
       options
     );
   }
+
+  getCategories() {
+    return this.http.get<any>(
+      'https://api.themoviedb.org/3/genre/movie/list',
+      options
+    );
+  }
 }
