@@ -3,6 +3,7 @@ import { inject, Injectable } from '@angular/core';
 import options from '../models/options';
 import { FilmDetail } from '../models/FilmDetail';
 import { TvShow } from '../models/TV-Show';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -43,10 +44,13 @@ export class FilmServicesService {
     );
   }
 
-  getCategories() {
-    return this.http.get<any>(
-      'https://api.themoviedb.org/3/genre/movie/list',
-      options
-    );
+  getCategories(): [Observable<any>, Observable<any>] {
+    return [
+      this.http.get<any>(
+        'https://api.themoviedb.org/3/genre/movie/list',
+        options
+      ),
+      this.http.get<any>('https://api.themoviedb.org/3/genre/tv/list', options),
+    ];
   }
 }

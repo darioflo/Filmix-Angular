@@ -1,11 +1,20 @@
 <app-navbar></app-navbar>
-
-<div class="dropdown">
-  <button class="dropdown-button">Categorías</button>
-  <div class="dropdown-content">
-    <a href="/category/action">Acción</a>
-    <a href="/category/comedy">Comedia</a>
-    <a href="/category/drama">Drama</a>
-    <a href="/category/horror">Terror</a>
+<section
+  class="section-categories w-screen h-[auto] flex justify-end items-end flex-row"
+>
+  <!-- Dropdown para Películas -->
+  <div class="dropdown">
+    <button class="dropdown-button">Películas</button>
+    <div class="dropdown-content">
+      <a href="/" *ngFor="let item of movieGenres">{{ item.name }}</a>
+    </div>
   </div>
-</div>
+
+  <!-- Dropdown para TV -->
+  <div class="dropdown">
+    <button class="dropdown-button">TV</button>
+    <div class="dropdown-content">
+      <a href="/" *ngFor="let item of tvGenres">{{ item.name }}</a>
+    </div>
+  </div>
+</section>

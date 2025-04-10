@@ -1,7 +1,15 @@
-/* Contenedor del menú desplegable */
+/* Contenedor principal de la sección */
+.section-categories {
+  padding-right: 6rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+/* Contenedor de cada dropdown */
 .dropdown {
   position: relative;
-  display: inline-block;
+  display: inline-block; /* Asegura que cada dropdown sea independiente */
 }
 
 /* Botón del menú */
@@ -22,13 +30,16 @@
 
 /* Contenido del menú desplegable */
 .dropdown-content {
-  display: none; /* Oculto por defecto */
+  opacity: 0;
   position: absolute;
+  top: 100%; /* Posiciona el menú justo debajo del botón */
+  left: 0;
   background-color: var(--first-color); /* Negro */
   min-width: 160px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   z-index: 1;
+  margin-top: 0.5rem; /* Espaciado entre el botón y el menú */
 }
 
 /* Estilo de los enlaces dentro del menú */
@@ -44,7 +55,7 @@
   background-color: var(--third-color); /* Rojo */
 }
 
-/* Mostrar el menú al pasar el cursor */
+/* Mostrar el menú al pasar el cursor sobre el contenedor del dropdown */
 .dropdown:hover .dropdown-content {
-  display: block;
+  opacity: 1;
 }
