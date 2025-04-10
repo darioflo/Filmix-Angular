@@ -45,3 +45,7 @@
 .info-film p b {
   color: var(--fifth-color); /* Texto destacado en rojo oscuro */
 }
+
+.extra {
+  color: red;
+}
