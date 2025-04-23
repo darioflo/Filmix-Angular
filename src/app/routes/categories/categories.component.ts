@@ -34,14 +34,4 @@ export class CategoriesComponent implements OnInit {
       },
     });
   }
-
-  aleatoria() {
-    console.log(1);
-  }
-  aleatoria2() {
-    console.log(2);
-  }
-  aleatoria3() {
-    console.log(3);
-  }
 }
