@@ -30,7 +30,7 @@ export class CategoriesComponent implements OnInit {
         console.log('TV Genres:', this.tvGenres);
       },
       error: (error) => {
-        console.log('Error fetching genre:', error);
+        console.log('Error fetching genres:', error);
       },
     });
   }
