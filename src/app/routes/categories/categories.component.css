@@ -42,7 +42,7 @@
   margin-top: 0.5rem; /* Espaciado entre el botón y el menú */
 }
 
-/* Estilo de los enlaces dentro del menú */
+
 .dropdown-content a {
   color: white;
   padding: 10px 15px;
@@ -52,7 +52,7 @@
 }
 
 .dropdown-content a:hover {
-  background-color: var(--third-color); /* Rojo */
+  background-color: var(--third-color); 
 }
 
 
