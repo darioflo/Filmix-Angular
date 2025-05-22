@@ -55,7 +55,7 @@
   background-color: var(--third-color); /* Rojo */
 }
 
-/* Mostrar el menú al pasar el cursor sobre el contenedor del dropdown */
+
 .dropdown:hover .dropdown-content {
   opacity: 1;
 }
