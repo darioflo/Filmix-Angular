@@ -49,6 +49,7 @@
   text-decoration: none;
   display: block;
   transition: background-color 0.3s ease;
+  
 }
 
 .dropdown-content a:hover {
