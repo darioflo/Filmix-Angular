@@ -31,6 +31,8 @@ export class CategoriesComponent implements OnInit {
       },
       error: (error) => {
         console.log('Error fetching genres:', error);
+        console.log(1);
+        
       },
     });
   }
