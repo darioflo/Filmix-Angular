@@ -46,3 +46,6 @@
   color: var(--fifth-color);
 }
 
+.class{
+  display: flex;
+}
